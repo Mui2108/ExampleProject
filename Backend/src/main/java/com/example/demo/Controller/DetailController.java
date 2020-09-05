@@ -4,15 +4,15 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 import com.example.demo.Entity.Detail;
-import com.example.demo.Entity.Product;
+
 import com.example.demo.Repository.DetailRepository;
-import com.example.demo.Repository.ProductRepository;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -27,7 +27,7 @@ public class DetailController {
     }
 
     @GetMapping("/detail")
-    public Collection<Detail> details() {
+    public Collection<Detail> detail() {
         return detailRepository.findAll().stream().collect(Collectors.toList());
     }
 }
